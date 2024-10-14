@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet'>
+</head>
+<body >
+    <div style="text-align: center;">
+        <h1><img src="images/border1.jpg" class="image1" alt="left border." /> Photo Gallery <img src="images/border2.jpg" class="image2" alt="right border."/></h1>
+        <nav >
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+<body>
+    <main class="photo-gallery">
+        <div class="gallery-controls">
+            <div style="text-align: center;">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </div>
+        
+        <div class="photo-wrapper">
+            <div class="photo">
+                <img src="images/tattoo3.jpg" width="1000" height="auto" alt="Vintage Yakuza Tattoo"/>
+            </div>
+            <div class="photo">
+                <img src="images/tattoo1.jpg" alt="A traditional Japanese full-body tattoo, inked by Gakkin"/>
+            </div>
+            <div class="photo">
+                <img src="images/tattoo2.jpg" alt="Onitsutaya Azaminoand Gontaro, a Man of the World"/>
+            </div>
+            <div class="photo">
+                <img src="images/artgallery.jpg" alt="Art Gallery Image"/>
+            </div>
+            <div class="photo">
+                <img src="images/computer.jpg" alt="computer Image"/>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div style="text-align: center;">
+            <pre>Contact us: varner4262@gmail.com<br> (912) 677 2336</pre>
+        </div>
+    </footer>
+    <script>
+        const photos = document.querySelectorAll('.photo');
+        let currentPhotoIndex = 0;
+    
+        // Function to update the carousel display
+        function updateGallery() {
+            photos.forEach((photo, index) => {
+                photo.style.display = index === currentPhotoIndex ? 'block' : 'none';
+            });
+        }
+    
+        // Initially display the first image
+        updateGallery();
+    
+        // Handle the 'Next' button click
+        document.getElementById('next').addEventListener('click', function () {
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            updateGallery();
+        });
+    
+        // Handle the 'Previous' button click
+        document.getElementById('prev').addEventListener('click', function () {
+            currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+            updateGallery();
+        });
+    </script>
+</body>
+</html>

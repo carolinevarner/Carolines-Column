@@ -1,0 +1,330 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'UnifrakturMaguntia';
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+h5 {
+    font-family: 'Archivo';
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+h6 {
+    font-family: 'Archivo Black';
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+h4 {
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
+    border-bottom: 2px solid #000000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 90%
+    
+}
+
+p {
+    font-family: 'Times New Roman', serif;
+    font-size: 22px;
+    text-align: justify;
+    /*float: left;*/
+}
+
+img {
+    align-items: left;
+    border: 30px;
+    width: 40%;
+    padding: 8px 20px 8px 8px;
+    margin-top: 0;
+}
+
+.image1 {
+    align-items: center;
+    border-right: 5px;
+    width: 6%;
+}
+
+.image2 {
+    align-items: center;
+    border-left: 5px;
+    width: 6%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
+    padding: 15px;
+    margin: 0;
+    width: 90%
+}
+
+nav a {
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%
+    
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.article2 {
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 90%
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    padding-left: 0%;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.main-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Ensure text is centered */
+
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.article-img {
+    max-width: 100%; /* Ensure image fits inside the article */
+    height: auto; /* Maintain the aspect ratio */
+    /*max-height: 500px; Optional: Control the maximum height of the image */
+
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+}
+
+.advertisement {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.advertisement img {
+    max-width: 100%;
+    height: 20;
+    width: 20;
+}
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    padding: 5px;
+    margin-top: 0;
+}
+
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.photo {
+    display: none; /* Hide all photos initially */
+    text-align: center;
+    height: 1600px;
+    width: 1550px;
+    padding: 0%;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+.photo img {
+    max-width: 100%; /* Ensure images are responsive */
+    /*max-height: 500px; Set a max height for the images 
+    object-fit: contain;*/
+}
+
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-family: 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+/* Hamburger Menu style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* hide regular nav items on smaller screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+.space {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least full viewport height */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-sized columns, 50% each */
+    gap: 20px;
+    padding: 20px;
+    flex-grow: 1; /* Allow main content to expand and fill the available space */
+    width: 100%; /* Ensure main takes full width of the screen */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    align-content: start;
+    margin-bottom: 0;
+}
+
+.column {
+    display: contents; /* Remove grid behavior here, it's handled by the parent */
+    grid-template-columns: 1fr 1fr;
+}
+
+.left, .right {
+    padding: 15px;
+    vertical-align: top;
+}
+
+.left img, .right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.left {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.right {
+    text-align: right;
+    padding-right: 50px;
+}
+
+/* Footer Styling */
+.footer {
+    margin-top:0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
